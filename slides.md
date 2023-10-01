@@ -21,27 +21,27 @@ image: 'https://source.unsplash.com/collection/94734566/1920x1080'
 ---
 
 <div class="absolute top-16">
-  <h1>Arrêtez d’écrire du PHP*, passez au Full Site Editing</h1>
+  <h1 class="text-[#5c6fc7]">Arrêtez d’écrire du PHP*, passez au Full Site Editing</h1>
 </div>
 
-<h3 class="mt-10">Adieu The Loop !</h3>
+<h3 class="mt-32">Adieu The Loop !</h3>
+
 ```php
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 ```
 
-<div class="absolute bottom-10 right-10">
-  <span class="">
+<div class="absolute bottom-20 right-10">
+  <span class="text-sm">
     *enfin presque ;)
   </span>
 </div>
 
 
 ---
-layout: intro-image-right
-image: /assets/media/1646725690644.jpeg
 ---
-
-# Faramaz Patrick
+<div class="flex items-center gap-10 h-full">
+<div class="flex-1">
+<h1 class="text-[#5c6fc7]">Faramaz Patrick</h1>
 
 <br />
 <br />
@@ -53,18 +53,36 @@ Indépendant depuis 2016 (FR, CH)
 <br />
 
 **ReactJS - VueJS - Next.js - Nuxt.js - WordPress - Craft CMS**
-
-
+</div>
+<div class="flex-1">
+<img src="/assets/media/1646725690644.jpeg" class="" />
+</div>
+</div>
 ---
-layout: intro-image-right
-image: /assets/media/ArtworkPodcastMain_w6nuaf.png
 ---
-
-# Co-présentateur du podcast Double Slash
+<div class="flex items-center gap-10 h-full">
+<div class="flex-1">
+<h1 class="text-[#5c6fc7]">Co-présentateur du podcast Double Slash</h1>
 
 Podcast bimensuel sur le développement web moderne
 
-<https://double-slash.dev/>
+https://double-slash.dev/
+
+</div>
+<div class="flex-1">
+<img src="/assets/media/ArtworkPodcastMain_w6nuaf.png" class="" />
+</div>
+</div>
+
+---
+layout: section
+---
+
+# But de la présentation
+
+Expliquer les bases du Full Site Editing pour vous donner envie de tester et approfondir le sujet.
+
+Et pourquoi pas sortir un premier site dans quelques mois en mode FSE
 
 
 ---
@@ -73,12 +91,13 @@ transition: slide-up
 level: 2
 ---
 
-# Bref Historique
+# Rapide Historique
 
 
 ---
 transition: slide-up
 level: 2
+layout: section
 ---
 
 ## Avant Gutenberg, WordPress ne proposait que TinyMCE en tant qu’éditeur de contenu.
@@ -88,16 +107,16 @@ level: 2
 ---
 transition: slide-up
 level: 2
-class: top-32
+layout: section
 ---
 
-## Trop limité pour les developpeurs et les utilisateurs
+## Trop limité pour les développeurs.euses et les utilisateurs.trices
 
 C'est donc à cause de cette faiblesse que l'on a vu l'apparition de différentes alternatives :
 
-- shortcodes
-- ACF avec les flexibles contents
-- Les pages builders tels que Divi, Elementor, etc.
+- shortcodes (mauvaise UX)
+- ACF avec les flexibles contents (mauvaise UX)
+- Les pages builders tels que Divi, Elementor, etc. (...)
 
 Ces derniers ont pris une grosse part de marché en attendant que WordPress sorte enfin une alternative.
 
@@ -105,59 +124,54 @@ Ces derniers ont pris une grosse part de marché en attendant que WordPress sort
 ---
 transition: slide-up
 level: 2
+layout: section
 ---
 
 ## L’idée du changement
 
+### 2016
 L'idée d'un nouvel éditeur visuel plus avancé a été initiée par Matt Mullenweg (créateur de WordPress) lors du WordCamp US **2016**.
 
+### 2017
 Le projet Gutenberg a donc commencé en 2017, ce qui a conduit à la création d'une équipe de développement dédiée à ce projet. Cette équipe a travaillé sur Gutenberg jusqu'à sa sortie en **2018**
 
+### 2018
 Gutenberg est donc un éditeur de contenu pour WordPress. Il a été intégré pour la première fois dans la version 5.0 du CMS en décembre **2018**.
 
-<h1 class="text-center mt-16">Nous sommes en 2023, cela fait 5 ans</h1>
-
-
 ---
 transition: slide-up
 level: 2
-class: top-32
+layout: section
 ---
 
-# Une sortie un peu chaotique !
-
+## Une sortie un peu chaotique !
 <div class="mt-10"></div>
+
+### Pas un builder !
+
 À sa sortie, Gutenberg n'était qu'un éditeur de contenu et son interface n'était pas du tout la même qu'aujourd'hui, et encore moins un équivalent d'un constructeur de pages tel qu'Elementor.
 
-Dans un premier temps, il y a eu une forte opposition à ce changement. Une grande partie de la communauté était contre l'arrivée de Gutenberg.
+<div class="mt-10"></div>
 
-Nous avons vu la sortie d'un fork de WordPress sans Gutenberg : "ClassicPress".
+Dans un premier temps, il y a eu une forte opposition à ce changement. Une grande partie de la communauté était contre l'arrivée de Gutenberg. <openmoji-stop-sign class="w-8 h-8" />
 
-L'un des plugins les plus populaires encore aujourd'hui est "Disable Gutenberg"<br /> avec plus de **700 000** installations.
+Nous avons vu la sortie d'un fork de WordPress sans Gutenberg : "ClassicPress". <game-icons-pirate-grave class="w-8 h-8" />
 
----
-transition: slide-up
-level: 2
-class: top-32
----
+L'un des plugins les plus populaires encore aujourd'hui est "Disable Gutenberg"<br /> avec plus de **700 000** installations. <twemoji-exploding-head class="w-8 h-8" />
 
-Si l'on prend un peu de recul, on peut analyser deux choses qui ont déclenché cette opposition :
-
-- Les gens ont pensé avoir un constructeur de pages avec Gutenberg, ce qui n'était pas du tout le cas au début. Et donc dès les premiers tests (Gutenberg étant limité au contenu dans un premier temps), les déceptions étaient grandes. Et les personnes déçues retournaient rapidement à leurs habitudes.
-
-- Les constructeurs de pages avaient pris une longueur d'avance considérable. Et les habitudes des utilisateurs étaient déjà bien établies. Il est donc logique de se demander pourquoi tout changer et forcer la main aux utilisateurs. Généralement, lorsque l'on passe les choses en force, on rencontre souvent de l'opposition.
 
 ---
 transition: slide-left
 level: 2
-class: top-32
+layout: section
 ---
 
 # L’arrivé du Full site editing
 
-<div class="mt-10"></div>
 
 Le Full Site Editing (FSE) est une fonctionnalité qui permet l'édition de tout le site directement depuis l'éditeur de site dans des sections dédiées.
+
+### WordPress 5.8 - juillet 2021
 
 Il a été introduit pour la première fois dans WordPress 5.8 en juillet 2021 et fait partie de la phase 2 de la feuille de route.
 
@@ -257,7 +271,8 @@ transition: slide-up
 level: 2
 ---
 
-## 4 - Restriction de certains réglages
+## 4 - Réglages de l’interface pour guider l’utilisateur.rice
+
 <div class="mt-10"></div>
 On peut régler assez finement certains réglages de l’interface :
 
@@ -275,7 +290,7 @@ transition: slide-up
 level: 2
 ---
 
-## 5 - La création d’éléments réutilisables
+## 5 - Des éléments prêts à l’emploi dans l'interface
 
 <div class="mt-10"></div>
 Avec les blocs et les patterns, l’éditeur de contenu dispose d’éléments disponibles et mis en forme.
@@ -301,7 +316,7 @@ Vous pouvez conserver les fichiers sources sur un gestionnaire de versions et tr
 
 ---
 layout: section
-transition: slide-left
+transition: slide-up
 level: 2
 ---
 
@@ -314,6 +329,19 @@ On retrouve souvent les mêmes éléments d’un site à l’autre.
 
 Exemple : FAQ. Je peux réutiliser tout mon système de FAQ sur différents sites.
 
+---
+layout: section
+transition: slide-left
+level: 2
+---
+
+## 8 - Parce que ...
+
+- C'est présent dans WordPress et ça ne risque pas de changer
+- Permet de livrer des sites professionels
+- Permet l'autonomie des utilisateurs.rices/editeurs.rices
+- WooCommerce passe de plus en plus sur les blocs.
+
 
 ---
 layout: section
@@ -321,48 +349,29 @@ transition: slide-up
 level: 2
 ---
 
-# Lexique de Gutenberg et du FSE
+# Lexique du FSE
 
 
 ---
 transition: slide-up
 level: 2
-class: top-32
 ---
 
-## theme.json
+### theme.json
 
 Le fichier de config pour les réglages du Gutenberg et du FSE + les styles par défaut des blocs.
 <br />Sans le savoir nous utilisons déjà le fichier theme.json de WordPress.
 
----
-transition: slide-up
-level: 2
-class: top-32
----
-
-## Styles
+### Styles
 
 Dérivés du theme.json pour proposer des styles différents pour un même theme.
 
----
-transition: slide-up
-level: 2
-class: top-32
----
-
-## Les templates (modèle de contenu)
+### Les templates (modèle de contenu)
 
 Comme le nom l’indique, il s’agit de template de page. Dans la création d’une page, nous avons soit le template par défaut, soit un template que l’on choisit dans le sélecteur.
 <br />Les templates sont 100% HTML.
 
----
-transition: slide-up
-level: 2
-class: top-32
----
-
-## Les templates parts (éléments de modèles)
+### Les templates parts (éléments de modèles)
 
 Les parts représentent des éléments de template. Comme le header, le footer ou même des petits éléments comme le post-meta.html que l'on retrouve dans le thème twenty-twenty-three.
 <br />Les parts sont 100% HTML
@@ -370,31 +379,18 @@ Les parts représentent des éléments de template. Comme le header, le footer o
 ---
 transition: slide-up
 level: 2
-class: top-32
 ---
 
-## Les patterns (compositions)
+### Les patterns (compositions)
 
 Ce sont des sortes de composant HTML réutilisables. Des blocs HTML avec du style déjà assemblés disponibles directement dans l’éditeur Gutenberg.<br />
 Les patterns sont sous forme de fichier PHP mais nous verrons un peu plus tard que le rendu reste en mode HTML.
 
----
-transition: slide-up
-level: 2
-class: top-32
----
-
-## Les synced patterns (compositions synchronisées)
+### Les synced patterns (compositions synchronisées)
 
 Ce sont des patterns réutilisables dans plusieurs contenus/pages et l’on peut modifier le pattern une seule fois pour toutes les pages.
 
----
-transition: slide-left
-level: 2
-class: top-32
----
-
-## Block
+### Block
 
 Ce sont les éléments principaux de l’éditeur Gutenberg. Dynamique ou statique, ils sont disponibles dans le sélecteur de bloc Gutenberg.<br />
 
@@ -407,22 +403,7 @@ layout: section
 level: 2
 ---
 
-# Le concept du FSE
-
-
----
-transition: slide-up
-level: 2
-class: top-32
----
-
-Le full site editing ou l’édition complète de site permet d’éditer tous les éléments d’un site WordPress.
-
-Désormais vous pouvez éditer les templates des pages et même en ajouter.
-
-Vous disposez également des compositions (éléments HTML) et comme les templates vous pouvez en créer.
-
-**Le full site editing ou l’édition complète de site se base sur 2 méthodes :**
+# Un nouveau modèle mental
 
 ---
 transition: slide-up
@@ -430,37 +411,24 @@ level: 2
 class: top-32
 ---
 
-## 1 - des fichiers présents dans le thème (parts, patterns, templates) qui sont prêts à l’utilisation.
-<div class="mt-10"></div>
-Vous developpez votre thème dans l'éditeur de code, le thème se base sur des fichiers (HTML, PHP).
-
----
-transition: slide-up
-level: 2
-class: top-32
----
-
-## 2 - des éléments (template, part, composition) sauvegardés en base de données
-<div class="mt-10"></div>
-À noter que ces éléments peuvent être une version modifiée des fichiers du thème ou une création complète via l’interface.
-
-<u class='pt-20'>On verra à l’utilisation qu’il n’est pas toujours simple de jongler entre les versions fichier et les versions modifiées.</u>
-
-
----
-transition: slide-up
-level: 2
-class: top-32
----
-
-# Un nouveau modèle mental !
-<div class="mt-10"></div>
 Les templates sont en HTML donc par définition, ils ne sont pas dynamiques. Cela oblige donc à réfléchir sous forme de bloc/pattern.
 
 Dans une page, dans un template, dans un part, tout est bloc. Tout doit être pensé sous forme de bloc.
 
 Pour les personnes qui font des Web Apps avec React/Vue, etc.. c’est déjà une habitude de penser comme cela.
 Pour les autres, il faut se forcer à penser sous forme de bloc.
+
+
+---
+transition: slide-up
+level: 2
+layout: section
+---
+
+# Avec le FSE, on ne pense plus sous forme de page mais sous forme de blocs
+
+## Stop les maquettes de pages
+
 
 
 ---
@@ -476,21 +444,13 @@ On peut aussi prendre l’atomic design comme modèle qui représente parfaiteme
 L’atomic design comprend des éléments sous forme d’atomes, de molécules, d’organismes, de template et de page. Vous voyez où je veux en venir ?
 
 ---
-transition: slide-up
+transition: slide-left
 level: 2
 layout: section
 ---
 
 <img src="/assets/media/1_U-jFHRJxePDHHBWtd19M8g.webp" />
 
-
----
-transition: slide-left
-level: 2
-layout: section
----
-
-# Avec le FSE, on ne pense plus sous forme de page mais sous forme de blocs !
 
 ---
 transition: slide-up
@@ -504,52 +464,120 @@ level: 2
 ---
 transition: slide-up
 level: 2
+layout: section
 ---
 
 <div class="mt-10"></div>
 
-## 1 - Créer un thème FSE
-
-<div class="mt-10"></div>
+## Créer un Block Theme
 
 Il suffit d'ajouter un fichier index.html dans un repertoire templates.
-C'est tout !
 
 <img src="/assets/media/getting-started.png" class="w-134 mx-auto mt-10 shadow" />
 
-Je peux très bien commencer comme ça et ajouter le reste via l'interface.
-
-Tous les éléments seront stockés en base de données.
+<div class="absolute bottom-5">Demo <bi-terminal /></div>
 
 ---
 transition: slide-up
 level: 2
+layout: section
 ---
 
-<div class="mt-2"></div>
+# Ok, et après ?
 
 
-### Mais je peux exporter le thème sous forme de fichier !
+---
+transition: slide-up
+level: 2
+layout: section
+---
+
+# Méthode 1
+
+## Je créer mes élements directement dans l'interface de l'éditeur de site
+
+- Templates
+- parts (header, footer, etc..)
+- patterns (compositions)
+
+From scratch ou en utilisant un Block Theme.
+
+---
+transition: slide-up
+level: 2
+layout: section
+---
+
+### Je peux exporter le thème sous forme de fichier
 
 Dans tous les panneaux d'édition de l'éditeur de site > Options > Export (Tools)
 
-<img src="/assets/media/export.gif" class="w-160 mx-auto mt-10 shadow" />
+<img src="/assets/media/export.gif" class="w-160 mx-auto shadow" />
 
 
 ---
 transition: slide-up
 level: 2
+layout: section
 ---
 
-<div class="mt-10"></div>
 
-## 2 - Je fais directement tous les fichiers dans le thème (Mode expert)
+# Méthode 2
 
-<div class="mt-10"></div>
+## Je fais directement dans mon éditeur de code tous les fichiers dans le thème (Mode je sais ce que je fais !)
 
-J'ai le droit d'utiliser l'interface ;)
 
-Pour commencer, je peux faire mes templates, templates part via l'interface et copier le code source.
+PS : J'ai le droit d'utiliser l'interface ;)
+
+
+---
+transition: slide-up
+level: 2
+layout: section
+---
+
+## Code HTML des utilisés dans les templates, parts et patterns...
+
+Le code HTML représente des éléments (blocs, patterns, etc..). Les valeurs contenues dans les commentaires sont les réglages des éléments.
+Le code est parsé pour être rendu dans l'éditeur. En front les commentaires sont supprimés.
+
+### Un container group
+
+```html
+<!-- wp:group {"layout":{"type":"constrained"}} -->
+    <div class="wp-block-group">
+    </div>
+<!-- /wp:group -->
+```
+
+### Un paragraphe
+
+```html
+<!-- wp:paragraph -->
+<p>Deserunt excepteur sunt consequat ad ea nulla ex.
+Ut ullamco nostrud do exercitation id pariatur exercitation sunt qui est aliquip.</p>
+<!-- /wp:paragraph -->
+```
+
+### Un titre
+
+```html
+<!-- wp:heading {"textAlign":"center","fontSize":"3xlarge"} -->
+<h2 class="wp-block-heading has-text-align-center has-3-xlarge-font-size">Ut ullamco nostrud do</h2>
+<!-- /wp:heading -->
+```
+
+
+
+---
+transition: slide-up
+level: 2
+layout: section
+---
+
+## Comme je ne connais pas par coeur les élements HTML, je peux utiliser l'interface de l'éditeur de site pour m'aider.
+
+Je peux faire mes templates, templates part via l'interface et copier le code source.
 
 Dans tous les panneaux d'édition de l'éditeur de site > Options > Copy all blocks (Tools)
 
@@ -562,13 +590,12 @@ ou passer en mode "Code Editor" et copier la source.
 ---
 transition: slide-up
 level: 2
+layout: section
 ---
 
-<div class="mt-10"></div>
 
-## Dans le cas ou je privilégie les fichiers, je ne conserve pas les versions modifiées en base de données.
+## Comme je privilégie les versions fichiers, je ne conserve pas les versions modifiées en base de données.
 
-<div class="mt-10"></div>
 
 J'efface les customisations via :
 
@@ -579,11 +606,10 @@ J'efface les customisations via :
 ---
 transition: slide-up
 level: 2
+layout: section
 ---
-<div class="mt-10"></div>
 
-
-- ou via l'interface de gestion des templates (ou parts, patterns)
+### ou via l'interface de gestion des templates (ou parts, patterns)
 
 <img src="/assets/media/reset-list.png" class=" mx-auto mt-10 shadow" />
 
@@ -591,11 +617,11 @@ level: 2
 ---
 transition: slide-left
 level: 2
+layout: section
 ---
 
-# Pour résumer
+# À retenir
 
-<div class="mt-10"></div>
 
 - Toutes les modifications sont enregistrées en base de données
 - Les fichiers du thème ne sont jamais modifiés
@@ -605,7 +631,7 @@ level: 2
 
 <div class="mt-10"></div>
 
-**Toutes les customisations sont enregistrées dans la table ```{prefix\}posts```. Avec des post_types "wp_template_part, wp_template, wp_navigation, etc.."**
+**Toutes les customisations sont enregistrées dans la table ```{prefix}posts```. Avec des post_types "wp_template_part, wp_template, wp_navigation, etc.."**
 
 
 ---
@@ -615,7 +641,7 @@ level: 2
 ---
 
 # Le fichier theme.json
-
+## Un des fichiers le plus important du FSE
 ---
 transition: slide-up
 level: 2
@@ -715,7 +741,6 @@ level: 2
 ---
 transition: slide-up
 level: 2
-class: top-32
 ---
 
 ## Le systeme va donc générer des variables CSS propres à chaque bloc.
@@ -765,8 +790,6 @@ level: 2
 ---
 
 ## Premier niveau de styles
-
-<div class="mt-2"></div>
 
 ```json
 {
@@ -865,7 +888,6 @@ level: 2
 transition: slide-up
 level: 2
 layout: section
-class: top-32
 ---
 
 ## Pour les styles, la bonne pratique est de reprendre les variables générées par la partie settings.
@@ -887,7 +909,6 @@ class: top-32
 transition: slide-up
 level: 2
 layout: section
-class: top-32
 ---
 
 # Les settings importants
@@ -895,9 +916,6 @@ class: top-32
 ---
 transition: slide-up
 level: 2
-layout: image-right
-class: top-32
-image: /assets/media/layout.png
 ---
 
 ## Layout
@@ -915,7 +933,7 @@ Quand le parent du bloc est en mode ```"layout":{"type":"constrained"}```.
 - wideSize : taille du contenu en mode "wide"
 - Reste le mode "full" qui prend toute la largeur de l'écran.
 
-<img src="/assets/media/layout-settings.png" class="w-50 mx-auto mt-1 shadow" />
+<!-- <img src="/assets/media/layout-settings.png" class="w-50 mx-auto mt-1 shadow" /> -->
 
 ---
 transition: slide-up
@@ -923,9 +941,7 @@ level: 2
 layout: section
 ---
 
-## Typography
-
-La partie "fontFamilies"
+## Typography (fontFamilies)
 
 ```json
 "typography": {
@@ -959,7 +975,6 @@ La partie "fontFamilies"
 transition: slide-up
 level: 2
 layout: section
-class: top-32
 ---
 
 ## La partie "fontFamilies" permet d'utiliser la Font API.
@@ -969,15 +984,17 @@ class: top-32
 
 *Attention fonctionne uniquement avec des polices locales.*
 
+### <twemoji-rocket class="w-10 h-10"/> 6.4 arrivée de la Font Library
+
 ---
 transition: slide-up
 level: 2
 layout: section
 ---
 
-## Typography
+## Typography (fontSizes)
 
-La partie "fontSizes"
+Tips => fluid: true
 
 ```json
 "typography": {
@@ -1095,7 +1112,7 @@ level: 2
 layout: section
 ---
 
-# J'ai une demi-bonne nouvelle !
+# Méthodes alternatives
 
 <div class="mt-10"></div>
 
@@ -1120,6 +1137,16 @@ layout: section
 ---
 
 <img src="/assets/media/stylebook.gif" class="mx-auto shadow" />
+
+---
+transition: slide-up
+level: 2
+layout: section
+---
+
+## Ou vous pouvez utiliser des generateurs de theme.json
+
+Exemple : <https://wpturbo.dev/generators/theme-json/>
 
 ---
 transition: slide-left
@@ -1175,6 +1202,20 @@ level: 2
 layout: section
 ---
 
+## Simple à créer et facile à utiliser
+
+- Créer un pattern est plutôt accessible.
+- Directement disponible dans le sélecteur (inserter).
+- Preview du pattern dans le sélecteur.
+- Inséré en un clic.
+- Possibilité de le synchroniser pour modifier le pattern en un seul endroit.
+
+---
+transition: slide-up
+level: 2
+layout: section
+---
+
 # Des fichier PHP mais attention !
 
 Oui, il est possible de mettre du code php dans les patterns mais dès qu'il est incorporé dans un contenu, il est transformé en HTML. Plus de partie dynamique !
@@ -1193,6 +1234,7 @@ layout: section
 # Autoload
 
 <div class="mt-10"></div>
+
 Les fichiers déposés dans ```/patterns``` sont disponibles automatiquement dans le sélecteur de composition.
 
 ---
@@ -1240,7 +1282,7 @@ level: 2
 layout: section
 ---
 
-<img src="/assets/media/pattern-sync.gif" class="w-200 mx-auto shadow" />
+<img src="/assets/media/pattern-sync.gif" class="w-180 mx-auto shadow" />
 
 ---
 transition: slide-up
@@ -1269,14 +1311,14 @@ L'utilisateur peut uniquement éditer le contenu.
 
 Évite les mauvaises manipulations.
 
-Vérouillage possible via l'interface ou dans le fichier.
+Verrouillage possible via l'interface ou dans le fichier.
 
 ---
 transition: slide-up
 level: 2
 ---
 
-<img src="/assets/media/lock.gif" class="w-170 mx-auto shadow" />
+<img src="/assets/media/lock.gif" class="w-160 mx-auto shadow" />
 
 ---
 transition: slide-up
@@ -1285,7 +1327,7 @@ layout: section
 ---
 
 ## Empêcher le déverrouillage par les éditeurs
-<div class="mt-10"></div>
+
 ```php
 add_filter(
  'block_editor_settings_all',
@@ -1367,6 +1409,7 @@ layout: section
 
 # Comme déjà mentionné, ils sont **100% HTML**.
 
+
 ---
 transition: slide-up
 level: 2
@@ -1386,6 +1429,7 @@ layout: section
 ---
 
 <img src="/assets/media/wordpress-hierarchie-des-fichiers-modeles-juillet-2022.png" class=" mx-auto w-[88%] shadow" />
+
 
 ---
 transition: slide-up
@@ -1489,7 +1533,7 @@ layout: section
 
 - Quand on doit afficher un champ personnalisé (ACF)
 - Si on veut créer un élément reutilisable sur plusieurs projets (FAQ, Carousel, ...)
-- ...
+- Quand on veut afficher un code HTML différent de la norme Gutenberg/FSE
 
 
 ---
@@ -1594,7 +1638,11 @@ function add_language_templates($template_file)
   $template_file_lg = [];
   // get current language
   $lang = apply_filters('gm_current_language', null);
-
+  // template defined in editor
+  $template = get_page_template_slug();
+  if($template) {
+    $template_file[] = $template;
+  }
   foreach ($template_file as $key => $value) {
     // add before template file name with the lang pattern = index-{lang}.php
     if ($lang !== '') {
@@ -1602,12 +1650,10 @@ function add_language_templates($template_file)
     }
     $template_file_lg[] = $value;
   }
-
   if ($lang !== '') {
     $template_file_lg[] = 'index-' . $lang . '.php';
   }
   $template_file_lg[] = 'index.php';
-
   return $template_file_lg;
 }
 ```
@@ -1621,4 +1667,87 @@ layout: section
 
 # WPML
 
-Gère la traduction des templates.
+## Prend en charge de FSE !
+
+Gère la traduction des templates, pattern, block, navigation, etc..
+
+Par contre, il ne trouve pas les éléments fichiers. Il faut modifier et sauver en base pour les voir disponibles dans l'interface de traduction.
+
+Pas simple à gérer.
+
+---
+transition: slide-left
+level: 2
+layout: section
+---
+
+<img src="/assets/media/wpml.png" class="w-200 mx-auto shadow" />
+
+
+---
+transition: slide-up
+level: 2
+layout: section
+---
+
+# Les librairies et autres outils
+
+
+---
+transition: slide-up
+level: 2
+layout: section
+---
+
+Documentation officielle : <https://developer.wordpress.org/block-editor/>
+
+Sites :
+
+- <https://fullsiteediting.com>
+- <https://gutenberg.10up.com/>
+
+
+---
+transition: slide-up
+level: 2
+layout: section
+---
+
+
+Block Library :
+
+- <https://wordpress.org/plugins/layout-grid/>
+- <https://github.com/godaddy-wordpress/coblocks>
+
+Thèmes :
+
+- <https://olliewp.com/>
+- <https://generateblocks.com/>
+- <https://www.kadencewp.com/blog/introducing-blocks-3/>
+- <https://wpspectra.com/>
+
+
+---
+transition: slide-left
+level: 2
+layout: section
+---
+
+## À venir
+
+Le prochain thème par défaut de WordPress (6.4) :
+
+<https://make.wordpress.org/core/2023/08/24/introducing-twenty-twenty-four/>
+
+
+---
+---
+<div class="flex items-center gap-10 h-full">
+<div class="flex-1">
+
+# Merci !
+</div>
+<div class="flex-1">
+<img src="/assets/media/wapuu-surf-1.webp" class="w-80" />
+</div>
+</div>
