@@ -1728,7 +1728,7 @@ Thèmes :
 
 
 ---
-transition: slide-left
+transition: slide-up
 level: 2
 layout: section
 ---
@@ -1741,7 +1741,9 @@ Le prochain thème par défaut de WordPress (6.4) :
 
 
 ---
+transition: slide-up
 ---
+
 <div class="flex items-center gap-10 h-full">
 <div class="flex-1">
 
@@ -1750,4 +1752,15 @@ Le prochain thème par défaut de WordPress (6.4) :
 <div class="flex-1">
 <img src="/assets/media/wapuu-surf-1.webp" class="w-80" />
 </div>
+</div>
+
+
+---
+---
+<div class="flex flex-col justify-center items-center h-full">
+
+<img src="/assets/media/qr.png" class="w-80" />
+
+https://wp-biarritz-23.goodmotion.fr
+
 </div>
