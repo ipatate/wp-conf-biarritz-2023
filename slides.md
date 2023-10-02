@@ -80,9 +80,9 @@ layout: section
 
 # But de la présentation
 
-Expliquer les bases du Full Site Editing pour vous donner envie de tester et approfondir le sujet.
+Expliquer les bases du Full Site Editing pour vous donner envie de tester et d'approfondir le sujet.
 
-Et pourquoi pas sortir un premier site dans quelques mois en mode FSE
+Et pourquoi pas sortir un premier site dans quelques mois en mode FSE <twemoji-rocket />
 
 
 ---
@@ -95,14 +95,28 @@ level: 2
 
 
 ---
+transition: fade
+level: 2
+layout: section
+---
+
+## Avant l'arrivée de Gutenberg, WordPress ne proposait que TinyMCE en tant qu’éditeur de contenu.
+
+<img src="/assets/media/styleselect.png" class="w-100 mx-auto mt-10 shadow" />
+
+<small>&#160;</small>
+
+---
 transition: slide-up
 level: 2
 layout: section
 ---
 
-## Avant Gutenberg, WordPress ne proposait que TinyMCE en tant qu’éditeur de contenu.
+## Avant l'arrivée de Gutenberg, WordPress ne proposait que TinyMCE en tant qu’éditeur de contenu.
 
-<img src="/assets/media/styleselect.png" class="w-134 mx-auto mt-10 shadow" />
+<img src="/assets/media/styleselect.png" class="w-100 mx-auto mt-10 shadow" />
+
+<small>En 2005, l'éditeur TinyMCE a été intégré à Wordpress 2.0 et continue d'être utilisé dans l'éditeur WordPress Classic.</small>
 
 ---
 transition: slide-up
@@ -118,7 +132,7 @@ C'est donc à cause de cette faiblesse que l'on a vu l'apparition de différente
 - ACF avec les flexibles contents (mauvaise UX)
 - Les pages builders tels que Divi, Elementor, etc. (...)
 
-Ces derniers ont pris une grosse part de marché en attendant que WordPress sorte enfin une alternative.
+Ces derniers ont pris une grosse part de marché en attendant que WordPress sorte enfin une vraie solution.
 
 
 ---
@@ -136,7 +150,7 @@ L'idée d'un nouvel éditeur visuel plus avancé a été initiée par Matt Mulle
 Le projet Gutenberg a donc commencé en 2017, ce qui a conduit à la création d'une équipe de développement dédiée à ce projet. Cette équipe a travaillé sur Gutenberg jusqu'à sa sortie en **2018**
 
 ### 2018
-Gutenberg est donc un éditeur de contenu pour WordPress. Il a été intégré pour la première fois dans la version 5.0 du CMS en décembre **2018**.
+Gutenberg est donc un éditeur de contenu pour WordPress. Il a été intégré pour la première fois dans la version 5.0 du CMS en décembre **2018**. Soit <strong class="text-[#5c6fc7]">5 ans</strong> déjà !!!
 
 ---
 transition: slide-up
@@ -147,7 +161,7 @@ layout: section
 ## Une sortie un peu chaotique !
 <div class="mt-10"></div>
 
-### Pas un builder !
+### Pas prêt et pas un builder !
 
 À sa sortie, Gutenberg n'était qu'un éditeur de contenu et son interface n'était pas du tout la même qu'aujourd'hui, et encore moins un équivalent d'un constructeur de pages tel qu'Elementor.
 
@@ -306,7 +320,7 @@ transition: slide-up
 level: 2
 ---
 
-## 6 - Le theme peut être contenu dans des fichiers et pas uniquement en base
+## 6 - Le thème peut être contenu dans des fichiers et pas uniquement en base
 
 <div class="mt-10"></div>
 En tant que développeur, je peux créer un thème FSE basé sur des fichiers et déployer mon thème en production sans la base-de-donnée.
@@ -338,8 +352,8 @@ level: 2
 ## 8 - Parce que ...
 
 - C'est présent dans WordPress et ça ne risque pas de changer
-- Permet de livrer des sites professionels
-- Permet l'autonomie des utilisateurs.rices/editeurs.rices
+- Permet de livrer des sites professionnels
+- Permet une grande autonomie des utilisateurs.rices/editeurs.rices
 - WooCommerce passe de plus en plus sur les blocs.
 
 
@@ -388,7 +402,7 @@ Les patterns sont sous forme de fichier PHP mais nous verrons un peu plus tard q
 
 ### Les synced patterns (compositions synchronisées)
 
-Ce sont des patterns réutilisables dans plusieurs contenus/pages et l’on peut modifier le pattern une seule fois pour toutes les pages.
+Ce sont des patterns réutilisables dans plusieurs contenus/pages et l’on peut modifier le pattern une seule fois pour toutes les pages. Uniquement disponible en passant par l'administration.
 
 ### Block
 
@@ -411,13 +425,20 @@ level: 2
 class: top-32
 ---
 
-Les templates sont en HTML donc par définition, ils ne sont pas dynamiques. Cela oblige donc à réfléchir sous forme de bloc/pattern.
+Les templates sont en HTML, logiquement, ils ne sont pas dynamiques. Cela oblige donc à réfléchir sous forme de bloc/pattern.
 
 Dans une page, dans un template, dans un part, tout est bloc. Tout doit être pensé sous forme de bloc.
 
 Pour les personnes qui font des Web Apps avec React/Vue, etc.. c’est déjà une habitude de penser comme cela.
 Pour les autres, il faut se forcer à penser sous forme de bloc.
 
+---
+transition: slide-up
+level: 2
+layout: section
+---
+
+# Il est possible de couvrir 80% des besoins avec les blocs de base
 
 ---
 transition: slide-up
@@ -428,7 +449,6 @@ layout: section
 # Avec le FSE, on ne pense plus sous forme de page mais sous forme de blocs
 
 ## Stop les maquettes de pages
-
 
 
 ---
@@ -492,6 +512,45 @@ level: 2
 layout: section
 ---
 
+## Code HTML des utilisés dans les templates, parts et patterns
+
+Le code HTML représente des éléments (blocs, patterns, etc..). Les valeurs contenues dans les commentaires sont les réglages des éléments.
+Le code est parsé pour être rendu dans l'éditeur. En front les commentaires sont supprimés.
+
+### Un container group
+
+```html
+<!-- wp:group {"layout":{"type":"constrained"}} -->
+    <div class="wp-block-group">
+    </div>
+<!-- /wp:group -->
+```
+
+### Un paragraphe
+
+```html
+<!-- wp:paragraph -->
+<p>Deserunt excepteur sunt consequat ad ea nulla ex.
+Ut ullamco nostrud do exercitation id pariatur exercitation sunt qui est aliquip.</p>
+<!-- /wp:paragraph -->
+```
+
+### Un titre
+
+```html
+<!-- wp:heading {"textAlign":"center","fontSize":"3xlarge"} -->
+<h2 class="wp-block-heading has-text-align-center has-3-xlarge-font-size">Ut ullamco nostrud do</h2>
+<!-- /wp:heading -->
+```
+
+
+
+---
+transition: slide-up
+level: 2
+layout: section
+---
+
 # Méthode 1
 
 ## Je créer mes élements directement dans l'interface de l'éditeur de site
@@ -528,45 +587,6 @@ layout: section
 
 
 PS : J'ai le droit d'utiliser l'interface ;)
-
-
----
-transition: slide-up
-level: 2
-layout: section
----
-
-## Code HTML des utilisés dans les templates, parts et patterns...
-
-Le code HTML représente des éléments (blocs, patterns, etc..). Les valeurs contenues dans les commentaires sont les réglages des éléments.
-Le code est parsé pour être rendu dans l'éditeur. En front les commentaires sont supprimés.
-
-### Un container group
-
-```html
-<!-- wp:group {"layout":{"type":"constrained"}} -->
-    <div class="wp-block-group">
-    </div>
-<!-- /wp:group -->
-```
-
-### Un paragraphe
-
-```html
-<!-- wp:paragraph -->
-<p>Deserunt excepteur sunt consequat ad ea nulla ex.
-Ut ullamco nostrud do exercitation id pariatur exercitation sunt qui est aliquip.</p>
-<!-- /wp:paragraph -->
-```
-
-### Un titre
-
-```html
-<!-- wp:heading {"textAlign":"center","fontSize":"3xlarge"} -->
-<h2 class="wp-block-heading has-text-align-center has-3-xlarge-font-size">Ut ullamco nostrud do</h2>
-<!-- /wp:heading -->
-```
-
 
 
 ---
@@ -1667,7 +1687,7 @@ layout: section
 
 # WPML
 
-## Prend en charge de FSE !
+## Prend en charge le FSE !
 
 Gère la traduction des templates, pattern, block, navigation, etc..
 
@@ -1699,6 +1719,8 @@ level: 2
 layout: section
 ---
 
+## Ressources
+
 Documentation officielle : <https://developer.wordpress.org/block-editor/>
 
 Sites :
@@ -1714,12 +1736,12 @@ layout: section
 ---
 
 
-Block Library :
+## Block Library :
 
 - <https://wordpress.org/plugins/layout-grid/>
 - <https://github.com/godaddy-wordpress/coblocks>
 
-Thèmes :
+## Thèmes :
 
 - <https://olliewp.com/>
 - <https://generateblocks.com/>
