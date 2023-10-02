@@ -559,7 +559,6 @@ layout: section
 - parts (header, footer, etc..)
 - patterns (compositions)
 
-From scratch ou en utilisant un Block Theme.
 
 ---
 transition: slide-up
@@ -585,7 +584,12 @@ layout: section
 
 ## Je fais directement dans mon éditeur de code tous les fichiers dans le thème (Mode je sais ce que je fais !)
 
+From scratch ou en utilisant un Block Theme :
 
+- <https://olliewp.com/>
+- <https://github.com/WordPress/twentytwentyfour>
+
+<div class="mt-10"></div>
 PS : J'ai le droit d'utiliser l'interface ;)
 
 
@@ -595,7 +599,7 @@ level: 2
 layout: section
 ---
 
-## Comme je ne connais pas par coeur les élements HTML, je peux utiliser l'interface de l'éditeur de site pour m'aider.
+## Comme je ne connais pas tous les élements, je peux utiliser l'interface de l'éditeur de site pour m'aider.
 
 Je peux faire mes templates, templates part via l'interface et copier le code source.
 
@@ -614,7 +618,7 @@ layout: section
 ---
 
 
-## Comme je privilégie les versions fichiers, je ne conserve pas les versions modifiées en base de données.
+## Comme je privilégie les versions fichiers (locales), je ne conserve pas les versions modifiées en base de données.
 
 
 J'efface les customisations via :
@@ -815,10 +819,7 @@ level: 2
 {
     "styles": {
         "border": {
-            "radius": "value",
-            "color": "value",
-            "style": "value",
-            "width": "value"
+            ...
         },
         "filter": {
             "duotone": "value"
@@ -893,10 +894,7 @@ level: 2
                     "link": {},
                     "h1": {},
                     "h2": {},
-                    "h3": {},
-                    "h4": {},
-                    "h5": {},
-                    "h6": {}
+                    ...
                 }
             },
             "etc": {}
@@ -931,7 +929,7 @@ level: 2
 layout: section
 ---
 
-# Les settings importants
+# Quelques exemples de réglages
 
 ---
 transition: slide-up
@@ -1087,35 +1085,6 @@ Permet de gérer le padding des blocs globalement.
   margin-left: calc(var(--wp--style--root--padding-left) * -1);
 }
 ```
-
----
-transition: slide-up
-level: 2
-layout: section
----
-
-## appearanceTools
-
-Active les outils de réglages dans l'éditeur de façon global. Évite de les activer un par un.
-Un peu en mode bourrin car au fur et à mesure des mises à jour, de nouveaux réglages vont apparaître.
-
-```json
-{
-  "settings": {
-    "appearanceTools": true
-  }
-}
-```
-
-Réglages disponibles actuellement :
-
-- border: color, radius, style, width
-- color: link
-- dimensions: minHeight
-- spacing: blockGap, margin, padding
-- typography: lineHeight
-- position: sticky
-
 
 ---
 transition: slide-up
