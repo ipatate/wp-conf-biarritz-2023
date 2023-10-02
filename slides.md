@@ -1205,6 +1205,31 @@ level: 2
 layout: section
 ---
 
+## Fichiers PHP avec des commentaires (obligatoire)
+
+```php
+<?php
+/**
+ * Title: Hidden 404
+ * Slug: trio/hidden-404
+ * Inserter: no
+ */
+?>
+```
+
+**Inserter: no** permet de ne pas afficher le pattern dans le sélecteur de blocs.
+
+<div class="mt-10"></div>
+
+<https://developer.wordpress.org/block-editor/reference-guides/block-api/block-patterns/#register_block_pattern>
+
+
+---
+transition: slide-up
+level: 2
+layout: section
+---
+
 # Des fichier PHP mais attention !
 
 Oui, il est possible de mettre du code php dans les patterns mais dès qu'il est incorporé dans un contenu, il est transformé en HTML. Plus de partie dynamique !
@@ -1341,27 +1366,6 @@ add_filter(
  2
 );
 ```
-
----
-transition: slide-up
-level: 2
-layout: section
----
-
-## Commentaires dans les patterns
-
-```php
-<?php
-/**
- * Title: Hidden 404
- * Slug: trio/hidden-404
- * Inserter: no
- */
-?>
-```
-
-**Inserter: no** permet de ne pas afficher le pattern dans le sélecteur de blocs.
-
 
 ---
 transition: slide-left
@@ -1510,7 +1514,7 @@ layout: section
 
 - Un bloc dynamique possède un rendu serveur. Une fonction PHP génère le contenu a afficher :
     - Liste de posts
-    - Champs dynamiques (ACF)
+    - Elements dynamiques
 
 ---
 transition: slide-up
@@ -1679,7 +1683,7 @@ level: 2
 layout: section
 ---
 
-# Les librairies et autres outils
+# Les librairies et ressources
 
 
 ---
@@ -1716,6 +1720,10 @@ layout: section
 - <https://generateblocks.com/>
 - <https://www.kadencewp.com/blog/introducing-blocks-3/>
 - <https://wpspectra.com/>
+
+## Figma :
+
+- <https://johannes-wp.com/>
 
 
 ---
