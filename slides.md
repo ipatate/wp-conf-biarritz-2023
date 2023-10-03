@@ -24,15 +24,19 @@ image: 'https://source.unsplash.com/collection/94734566/1920x1080'
   <h1 class="text-[#5c6fc7]">Arrêtez d’écrire du PHP*, passez au Full Site Editing</h1>
 </div>
 
-<h3 class="mt-32">Adieu The Loop !</h3>
+<h3 class="mt-32">Adieu The Loop ! <noto-confetti-ball class="w-10 h-10" /></h3>
 
 ```php
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+...
+<?php endwhile; else : ?>
+ <p><?php esc_html_e( 'Sorry, no posts matched your criteria.' ); ?></p>
+<?php endif; ?>
 ```
 
 <div class="absolute bottom-20 right-10">
   <span class="text-sm">
-    *enfin presque ;)
+    *dans vos templates
   </span>
 </div>
 
@@ -183,13 +187,11 @@ layout: section
 # L’arrivé du Full site editing
 
 
-Le Full Site Editing (FSE) est une fonctionnalité qui permet l'édition de tout le site directement depuis l'éditeur de site dans des sections dédiées.
+Le FSE, ou "éditeur de site", permet aux utilisateurs.rices de personnaliser le site entier, y compris les en-têtes, les pieds de page, la navigation et les modèles de page, etc.. directement depuis l'éditeur de site.
 
 ### WordPress 5.8 - juillet 2021
 
 Il a été introduit pour la première fois dans WordPress 5.8 en juillet 2021 et fait partie de la phase 2 de la feuille de route.
-
-Le FSE, ou "éditeur de site", permet aux utilisateurs de personnaliser leur site entier, y compris les en-têtes, les pieds de page, la navigation et les modèles de page, directement depuis l'éditeur de site.
 
 
 ---
@@ -209,11 +211,12 @@ level: 2
 
 ## 1 - Parce que c’est natif et dans le core de WordPress
 <div class="mt-10"></div>
+
+Pour utiliser Gutenberg, vous n’avez pas besoin d’installer un plugin ou de payer une licence. C’est disponible directement dans une nouvelle installation de WordPress.
+
 Le développement de l’éditeur Gutenberg peut-être testé et suivi via le plugin. Le plugin embarque les évolutions de l’éditeur avant d’être mergé dans le core de Wordpress à chaque sortie d’une nouvelle version.
 
-Comme pour le CMS, Gutenberg est totalement open-source (et donc pas orienté business).
-
-Pour utiliser Gutenberg, vous n’avez donc pas besoin d’installer un plugin ou de payer une licence. C’est disponible directement dans une nouvelle installation de WordPress.
+Comme pour le CMS, Gutenberg est totalement open-source.
 
 
 ---
@@ -438,7 +441,19 @@ level: 2
 layout: section
 ---
 
-# Il est possible de couvrir 80% des besoins avec les blocs de base
+## Il est possible de couvrir 80% des besoins avec les blocs de base présent dans WordPress
+
+- block group, row, column
+- block heading, paragraph, list, image, etc..
+- block navigation, site logo, etc..
+- query loop, post title, post content, etc..
+
+<div class="mt-10"></div>
+
+### Plus avancé
+
+- Block variations pour étendre les blocs de base (query loop, etc..)
+- Plugin pour l'interface Gutenberg (sidebar, post status, etc..)
 
 ---
 transition: slide-up
@@ -934,6 +949,7 @@ layout: section
 ---
 transition: slide-up
 level: 2
+layout: section
 ---
 
 ## Layout
@@ -1135,8 +1151,9 @@ layout: section
 
 ## Ou vous pouvez utiliser des generateurs de theme.json
 
-Exemple : <https://wpturbo.dev/generators/theme-json/>
-
+Exemple :
+- <https://wpturbo.dev/generators/theme-json/>
+- <https://www.gutenberg-devtools.com/generator/themejson-support>
 ---
 transition: slide-left
 level: 2
