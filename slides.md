@@ -1067,40 +1067,6 @@ Génère un code dans ce style :
 --wp--preset--font-size--medium: clamp(0.9rem, 0.9rem + ((1vw - 0.48rem) * 0.577), 1.2rem);
 ```
 
----
-transition: slide-up
-level: 2
-layout: section
----
-
-## Root padding
-
-Permet de gérer le padding des blocs globalement.
-
-```json
-{
-    "settings": {
-        "useRootPaddingAwareAlignments": true
-    },
-    "styles": {
-        "spacing": {
-            "padding": {
-                "top": "0px",
-                "right": "2rem",
-                "bottom": "0px",
-                "left": "2rem"
-            }
-        }
-    }
-}
-```
-
-```css
-.has-global-padding > .alignfull {
-  margin-right: calc(var(--wp--style--root--padding-right) * -1);
-  margin-left: calc(var(--wp--style--root--padding-left) * -1);
-}
-```
 
 ---
 transition: slide-up
