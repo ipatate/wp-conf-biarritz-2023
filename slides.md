@@ -1577,7 +1577,9 @@ layout: section
 
 # Polylang
 
-Pas géré. Gère uniquement les traductions des contenus. Pas des templates.
+### Prend en charge le FSE en mode pro uniquement
+
+J'ai donc créé une solution pour gérer le FSE en mode free <openmoji-smirking-face />
 
 ---
 transition: slide-up
