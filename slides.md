@@ -527,45 +527,6 @@ level: 2
 layout: section
 ---
 
-## Code HTML des utilisés dans les templates, parts et patterns
-
-Le code HTML représente des éléments (blocs, patterns, etc..). Les valeurs contenues dans les commentaires sont les réglages des éléments.
-Le code est parsé pour être rendu dans l'éditeur. En front les commentaires sont supprimés.
-
-### Un container group
-
-```html
-<!-- wp:group {"layout":{"type":"constrained"}} -->
-    <div class="wp-block-group">
-    </div>
-<!-- /wp:group -->
-```
-
-### Un paragraphe
-
-```html
-<!-- wp:paragraph -->
-<p>Deserunt excepteur sunt consequat ad ea nulla ex.
-Ut ullamco nostrud do exercitation id pariatur exercitation sunt qui est aliquip.</p>
-<!-- /wp:paragraph -->
-```
-
-### Un titre
-
-```html
-<!-- wp:heading {"textAlign":"center","fontSize":"3xlarge"} -->
-<h2 class="wp-block-heading has-text-align-center has-3-xlarge-font-size">Ut ullamco nostrud do</h2>
-<!-- /wp:heading -->
-```
-
-
-
----
-transition: slide-up
-level: 2
-layout: section
----
-
 # Méthode 1
 
 ## Je créer mes élements directement dans l'interface de l'éditeur de site
@@ -606,6 +567,47 @@ From scratch ou en utilisant un Block Theme :
 
 <div class="mt-10"></div>
 PS : J'ai le droit d'utiliser l'interface ;)
+
+
+---
+transition: slide-up
+level: 2
+layout: section
+---
+
+## Code HTML des utilisés dans les templates, parts et patterns
+
+Le code HTML représente des éléments (blocs, patterns, etc..). Les valeurs contenues dans les commentaires sont les réglages des éléments.
+Le code est parsé pour être rendu dans l'éditeur. En front les commentaires sont supprimés.
+
+### Un container group
+
+```html
+<!-- wp:group {"layout":{"type":"constrained"}} -->
+    <div class="wp-block-group">
+    </div>
+<!-- /wp:group -->
+```
+
+### Un paragraphe
+
+```html
+<!-- wp:paragraph -->
+<p>Deserunt excepteur sunt consequat ad ea nulla ex.
+Ut ullamco nostrud do exercitation id pariatur exercitation sunt qui est aliquip.</p>
+<!-- /wp:paragraph -->
+```
+
+### Un titre
+
+```html
+<!-- wp:heading {"textAlign":"center","fontSize":"3xlarge"} -->
+<h2 class="wp-block-heading has-text-align-center has-3-xlarge-font-size">Ut ullamco nostrud do</h2>
+<!-- /wp:heading -->
+```
+
+
+
 
 
 ---
@@ -1018,7 +1020,7 @@ layout: section
 
 *Attention fonctionne uniquement avec des polices locales.*
 
-### <twemoji-rocket class="w-10 h-10"/> 6.4 arrivée de la Font Library
+### ~~<twemoji-rocket class="w-10 h-10"/> 6.4 arrivée de la Font Library~~
 
 ---
 transition: slide-up
