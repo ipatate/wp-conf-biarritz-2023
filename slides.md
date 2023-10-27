@@ -3,7 +3,6 @@ theme: apple-basic
 class: text-center
 highlighter: 'prism'
 lineNumbers: false
-download: true
 info: |
   ## WordPress Full Site Editing en 2023
 drawings:
