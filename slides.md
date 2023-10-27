@@ -3,6 +3,7 @@ theme: apple-basic
 class: text-center
 highlighter: 'prism'
 lineNumbers: false
+download: true
 info: |
   ## WordPress Full Site Editing en 2023
 drawings:
@@ -33,6 +34,12 @@ image: 'https://source.unsplash.com/collection/94734566/1920x1080'
  <p><?php esc_html_e( 'Sorry, no posts matched your criteria.' ); ?></p>
 <?php endif; ?>
 ```
+
+<div class="absolute bottom-20 left-10">
+  <span class="text-sm">
+    <a href="slidev-exported.pdf" download="fse-wc-biarritz-23.pdf"><material-symbols-cloud-download class="mr-1" />Télécharger la présentation en format PDF</a>
+  </span>
+</div>
 
 <div class="absolute bottom-20 right-10">
   <span class="text-sm">
