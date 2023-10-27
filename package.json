@@ -14,7 +14,7 @@
   },
   "devDependencies": {
     "@iconify/json": "^2.2.122",
-    "playwright-chromium": "^1.38.1",
+    "playwright-chromium": "^1.39.0",
     "unplugin-icons": "^0.17.0"
   }
 }
