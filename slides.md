@@ -37,7 +37,7 @@ image: 'https://source.unsplash.com/collection/94734566/1920x1080'
 
 <div class="absolute bottom-20 left-10">
   <span class="text-sm">
-    <a href="slidev-exported.pdf" download="fse-wc-biarritz-23.pdf"><material-symbols-cloud-download class="mr-1" />Télécharger la présentation en format PDF</a>
+    <a href="/slides-export.pdf" download="fse-wc-biarritz-23.pdf"><material-symbols-cloud-download class="mr-1" />Télécharger la présentation en format PDF</a>
   </span>
 </div>
 
