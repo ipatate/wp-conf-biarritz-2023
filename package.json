@@ -2,9 +2,9 @@
   "name": "wp-fse",
   "private": true,
   "scripts": {
-    "build": "npm slidev build",
-    "dev": "npm slidev --open",
-    "export": "npm slidev export"
+    "build": "slidev build",
+    "dev": "slidev --open",
+    "export": "slidev export"
   },
   "dependencies": {
     "@slidev/cli": "^0.43.5",
